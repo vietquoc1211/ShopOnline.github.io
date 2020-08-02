@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/ShopOnline', {useNewUrlParser: true, useUnifiedTopology: true},function(err)
+const uri = "mongodb+srv://vietbq:vietbq@cluster0.zentx.mongodb.net/OnlineShop?retryWrites=true&w=majority";
+
+mongoose.connect(uri,function(err)
 {
     if(err)
     {
